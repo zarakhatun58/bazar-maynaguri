@@ -1,106 +1,167 @@
-import React from "react";
+import { Alert, Form, Container, Row, Col } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import useAuth from "./../../../hooks/useAuth";
+import { useLocation, useHistory } from "react-router-dom";
 
 const Login = () => {
+  const {
+    signInWithGoogle,
+    user,
+    setUser,
+    saveUser,
+    logOut,
+    setIsLoading,
+    handleEmailLogin,
+    loginWithFacebook,
+  } = useAuth();
+
+  const { register, handleSubmit, reset } = useForm();
+  const [loginData, setLoginData] = useState({});
+
+  const history = useHistory();
+  const location = useLocation();
+
+  const url = location.state?.from || "/home";
+
+  const handleOnChange = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+  };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((res) => {
+        setIsLoading(true);
+        setUser(res.user);
+        saveUser(user.email, user.displayName, "PUT");
+        history.push(url);
+      })
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+  const handleFacebookLogin = () => {
+    loginWithFacebook()
+      .then((res) => {
+        setIsLoading(true);
+        setUser(res.user);
+        saveUser(user.email, user.displayName, "PUT");
+        history.push(url);
+      })
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
+  const handleLogOut = () => {
+    setIsLoading(true);
+    logOut()
+      .then((res) => {
+        setUser({});
+        history.push("/home");
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error);
+      });
+  };
+
+  const onSubmit = (data) => {
+    handleEmailLogin(data.email, data.password);
+    reset();
+  };
+
   return (
-    <div class="wrapper">
-      <div class="search_main_section">
-        <div class="container">
-          <div class="row res_padd">
-            <div class="main-center-div">
-              <div class="top-border-div">
-                <div class="login-from-area">
-                  <h2>Create Account</h2>
-                  <div>
-                    <input
-                      type="text"
-                      class="login-type"
-                      placeholder="Full name"
-                      name=""
-                    />
-                    <div class="clearfix"></div>
-                  </div>
-
-                  <div>
-                    <input
-                      type="text"
-                      class="login-type"
-                      placeholder="Email"
-                      name=""
-                    />
-                    <div class="clearfix"></div>
-                  </div>
-
-                  <div>
-                    <input
-                      type="text"
-                      class="login-type"
-                      placeholder="Mobile number"
-                      name=""
-                    />
-                    <div class="clearfix"></div>
-                  </div>
-
-                  <div class="password-in">
-                    <input
-                      id="password-field"
-                      type="password"
-                      class="login-type"
-                      name="password"
-                      placeholder="password"
-                    />
-                    <div class="clearfix"></div>
-                    <span
-                      toggle="#password-field"
-                      class="field-icon fa fa-fw fa-eye toggle-password"
-                    ></span>
-                  </div>
-                  <div class="password-in">
-                    <input
-                      id="password-field"
-                      type="password"
-                      class="login-type"
-                      name="password"
-                      placeholder="Confirm password"
-                    />
-                    <div class="clearfix"></div>
-                    <span
-                      toggle="#password-field"
-                      class="field-icon fa fa-fw fa-eye toggle-password"
-                    ></span>
-                  </div>
-                  <p>
-                    By clicking Sign In or continue with Facebook or Google, you
-                    agree to all <a href=""> Terms of Service</a> and{" "}
-                    <a href="#"> Privacy Policy</a>
-                  </p>
-                  <button type="submit" class="login-submit">
-                    Sign up
-                  </button>
-                </div>
-                <div class="or-area">
-                  <span>Or Continue with</span>
-                </div>
-                <div class="login-socials-area">
-                  <div class="socials-btns">
-                    <a href="#" class="common-btns facebook-btn">
-                      <img src="./images/login-facebook.png" alt="" /> Facebook
-                    </a>
-                    <a href="#" class="common-btns google-btn">
-                      <img src="./images/login-google.png" alt="" /> Google
-                    </a>
-                  </div>
-                </div>
+    <Container className="bg-light py-5 w-50 ">
+      <Row className="justify-content-md-center">
+        <Col>
+          <div className=" pb-5">
+            <h3 className="text-center  pb-3">Sign In</h3>
+            <div className=" mx-auto">
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <input
+                  type="email"
+                  onChange={handleOnChange}
+                  className="form-control  mb-3"
+                  {...register("email")}
+                  placeholder="Your Email"
+                  required
+                />
+                <input
+                  type="password"
+                  onChange={handleOnChange}
+                  className="form-control  mb-3"
+                  {...register("password")}
+                  placeholder="Your password"
+                  required
+                />
+                <Form.Group
+                  className="mb-3 d-flex justify-content-between"
+                  controlId="formBasicCheckbox"
+                >
+                  <Form.Check type="checkbox" label="Check me out" />
+                  <Link to="/"> Forgot Password</Link>
+                </Form.Group>
+                <button className="btn btn-danger w-100 fw-bold" type="submit">
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+          <p>---------------- Continue With---------------------------</p>
+          <div className="mx-auto p-0 ">
+            <div className=" d-flex justify-content-center mb-2 ">
+              <div className="mx-2">
+                {" "}
+                <button
+                  onClick={handleGoogleLogin}
+                  className="btn btn-primary text-white"
+                >
+                  Google
+                </button>
               </div>
-              <div class="bottom-account-div">
-                <p>
-                  Already have an account? <a href="login.html">Login</a>
-                </p>
+              <div className="">
+                <button
+                  onClick={handleFacebookLogin}
+                  className="btn btn-primary text-white"
+                >
+                  Facebook
+                </button>
+              </div>
+            </div>
+            <div>
+              <div>
+                <Link
+                  className="text-success"
+                  style={{
+                    textDecoration: "none",
+                    color: "#000",
+                    marginTop: "10px",
+                  }}
+                  to="/signup"
+                >
+                  Dont have an Account ? Create Account
+                </Link>
+              </div>
+              <div>
+                {user?.email && (
+                  <Alert severity="success">Login successfully!</Alert>
+                )}
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

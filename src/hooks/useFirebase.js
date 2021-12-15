@@ -5,22 +5,23 @@ import {
   signOut,
   updateProfile,
   onAuthStateChanged,
+  FacebookAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useState, useEffect } from "react";
-import initializeFirebase from "../Firebase/firebase.init.js";
+import initializeAuthentication from "../Firebase/firebase.init";
 
-initializeFirebase();
+initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [admin, setAdmin] = useState(false);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
+  //observer user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       console.log(user);
@@ -29,19 +30,19 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
-      setIsLoading(false);
+      setIsLoading(true);
     });
     return () => unsubscribe();
   }, [auth]);
 
-  //   useEffect(() => {
-  //     fetch(`https://arcane-river-42711.herokuapp.com/users/${user?.email}`)
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         setAdmin(data?.admin);
-  //       });
-  //   }, [user?.email]);
-  //   console.log(admin);
+  // useEffect(() => {
+  //   fetch(`https://arcane-river-42711.herokuapp.com/users/${user?.email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setAdmin(data?.admin);
+  //     });
+  // }, [user?.email]);
+  // console.log(admin);
 
   const handleRegister = (email, password, name) => {
     createUserWithEmailAndPassword(auth, email, password)
@@ -85,11 +86,24 @@ const useFirebase = () => {
     return signOut(auth);
   };
 
+  const loginWithFacebook = () => {
+    return signInWithPopup(auth, FacebookAuthProvider);
+    const provider = new FacebookAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
   return {
     user,
-    admin,
+
     setUser,
     signInWithGoogle,
+    loginWithFacebook,
     isLoading,
     setIsLoading,
     handleRegister,

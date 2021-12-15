@@ -1,8 +1,18 @@
 import React from "react";
-import { Col, Row, Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import {
+  Col,
+  Row,
+  Container,
+  Navbar,
+  Nav,
+  NavDropdown,
+  Button,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth.js";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
   return (
     <>
       <div>
@@ -71,6 +81,9 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto hover:color-indigo">
+              <Link to="/dashboard" className="mx-2 text-white font-bold ">
+                Dashboard
+              </Link>
               <NavDropdown
                 title="All Categories"
                 id="collasible-nav-dropdown"
@@ -123,18 +136,42 @@ const Header = () => {
 
               <Nav.Link href="#features">About Bazar Maynaguri</Nav.Link>
 
-              <Nav.Link href="#pricing">B2B Information</Nav.Link>
-              <Nav.Link href="#pricing">Faq</Nav.Link>
-              <Nav.Link href="#pricing">Contact Us</Nav.Link>
-              <Nav.Link href="#pricing">Enquiry Us</Nav.Link>
+              <Nav.Link as={Link} className="text-light" to="/">
+                B2B Information
+              </Nav.Link>
+              <Nav.Link as={Link} className="text-light" to="/">
+                Faq
+              </Nav.Link>
+              <Nav.Link as={Link} className="text-light" to="/">
+                Contact Us
+              </Nav.Link>
+              <Nav.Link href="/">Enquiry Us</Nav.Link>
             </Nav>
             <Nav>
-              <Link to="/login" className="mx-2 text-white font-bold ">
-                Login
-              </Link>
-              <Link to="/signup" className="mx-2 text-white font-bold ">
-                Sign Up
-              </Link>
+              <Nav.Link as={Link} className="text-light" to="/dashboardHome">
+                Dashboard
+              </Nav.Link>
+
+              <Navbar.Text className="text-light">
+                <span className="text-light">{user?.displayName}</span>
+              </Navbar.Text>
+
+              {!user?.email ? (
+                <div>
+                  <Nav.Link
+                    as={Link}
+                    className="text-dark"
+                    to="/dashboard"
+                  ></Nav.Link>
+                  <Nav.Link as={Link} className="text-light" to="/login">
+                    <Button variant="primary">Login</Button>
+                  </Nav.Link>
+                </div>
+              ) : (
+                <Button onClick={() => logOut()} variant="primary">
+                  Logout
+                </Button>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
