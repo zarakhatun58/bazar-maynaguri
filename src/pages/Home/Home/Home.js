@@ -1,11 +1,12 @@
 import React from "react";
 
-import DashboardHome from "./../Dashboard/DashboardHome";
 import EditProfile from "./../../Profile/EditProfile";
+import Banner from "./../Banner";
 
 const Home = () => {
   return (
     <div>
+      <Banner></Banner>
       <EditProfile></EditProfile>
     </div>
   );
