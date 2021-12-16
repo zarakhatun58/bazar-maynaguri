@@ -1,23 +1,15 @@
 import React from "react";
-import Dashboard from "./Dashboard.js";
-import EditProfile from "./../../Profile/EditProfile";
+
 import MyOrder from "./../../MyOrder/MyOrder";
 import MyFavorite from "./../../MyFavorite/MyFavorite";
 import Message from "./../../Message/Message";
 import Reviews from "./../../Reviews/Reviews";
 import Notification from "./../../Notification/Notification";
 import { Link, useRouteMatch, Switch, Route } from "react-router-dom";
-import {
-  Button,
-  Form,
-  FormControl,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Offcanvas,
-} from "react-bootstrap";
+import { Button, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import useAuth from "./../../../hooks/useAuth";
+import DashboardScreen from "./DashboardScreen";
 
 const DashboardHome = (props) => {
   const { window } = props;
@@ -84,7 +76,11 @@ const DashboardHome = (props) => {
                   </Nav.Link>
                 </div>
 
-                <Button onClick={() => logOut()} variant="primary">
+                <Button
+                  onClick={() => logOut()}
+                  variant="danger"
+                  className="nav-color"
+                >
                   Logout
                 </Button>
               </Nav>
@@ -94,6 +90,9 @@ const DashboardHome = (props) => {
       </Navbar>
       <div>
         <Switch>
+          <Route exact path={path}>
+            <DashboardScreen></DashboardScreen>
+          </Route>
           <Route path={`${path}/myOrder`}>
             <MyOrder></MyOrder>
           </Route>

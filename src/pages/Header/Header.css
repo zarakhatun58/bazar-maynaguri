@@ -1,0 +1,6 @@
+.nav-color {
+  background-color: crimson;
+}
+.nav-color:hover {
+  background-color: rgb(4, 4, 49);
+}

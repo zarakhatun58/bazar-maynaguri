@@ -1,4 +1,5 @@
 import React from "react";
+import "./Header.css";
 import {
   Col,
   Row,
@@ -85,7 +86,7 @@ const Header = () => {
             <Nav>
               <Nav.Link
                 as={Link}
-                className="text-light bg-red hover:bg-indigo "
+                className="nav-color text-light "
                 to="/dashboardHome"
               >
                 Dashboard
@@ -93,7 +94,7 @@ const Header = () => {
               <NavDropdown
                 title="All Categories"
                 id="collasible-nav-dropdown"
-                className="text-light"
+                className="text-light nav-color"
               >
                 <NavDropdown.Item href="#action/3.1">
                   Vegetables
@@ -140,29 +141,29 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link as={Link} className="text-light" to="/home">
+              <Nav.Link as={Link} className="text-light nav-color" to="/home">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} className="text-light" to="/home">
+              <Nav.Link as={Link} className="text-light nav-color" to="/home">
                 About Bazar Maynaguri
               </Nav.Link>
 
-              <Nav.Link as={Link} className="text-light" to="/">
+              <Nav.Link as={Link} className="text-light nav-color" to="/">
                 B2B Information
               </Nav.Link>
-              <Nav.Link as={Link} className="text-light" to="/">
+              <Nav.Link as={Link} className="text-light nav-color" to="/">
                 Faq
               </Nav.Link>
-              <Nav.Link as={Link} className="text-light" to="/">
+              <Nav.Link as={Link} className="text-light nav-color" to="/">
                 Contact Us
               </Nav.Link>
-              <Nav.Link as={Link} className="text-light" to="/">
+              <Nav.Link as={Link} className="text-light nav-color" to="/">
                 Enquiry Us
               </Nav.Link>
             </Nav>
             <Nav>
               <Navbar.Text className="text-light">
-                <span className="text-dark">{user?.displayName}</span>
+                <span className="text-light">{user?.displayName}</span>
               </Navbar.Text>
 
               {!user?.email ? (

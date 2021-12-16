@@ -1,11 +1,12 @@
 import React from "react";
 
 import DashboardHome from "./../Dashboard/DashboardHome";
+import EditProfile from "./../../Profile/EditProfile";
 
 const Home = () => {
   return (
     <div>
-      <DashboardHome></DashboardHome>
+      <EditProfile></EditProfile>
     </div>
   );
 };
