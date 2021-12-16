@@ -10,6 +10,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useState, useEffect } from "react";
+
 import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication();
@@ -17,9 +18,11 @@ initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [authError, setAuthError] = useState("");
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
+  const facebookProvider = new FacebookAuthProvider();
 
   //observer user
   useEffect(() => {
@@ -30,27 +33,28 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
-      setIsLoading(true);
+      setIsLoading(false);
     });
     return () => unsubscribe();
   }, [auth]);
 
   // useEffect(() => {
-  //   fetch(`https://arcane-river-42711.herokuapp.com/users/${user?.email}`)
+  //   fetch(`https://afternoon-springs-05594.herokuapp.com/users/${user?.email}`)
   //     .then((res) => res.json())
   //     .then((data) => {
-  //       setAdmin(data?.admin);
+  //       console.log(data);
   //     });
   // }, [user?.email]);
-  // console.log(admin);
 
-  const handleRegister = (email, password, name) => {
+  const handleRegister = (email, password, name, history) => {
+    setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         const newUser = { email, displayName: name };
 
         setUser(newUser);
+        history.replace("/");
         updateProfile(auth.currentUser, {
           displayName: name,
         })
@@ -59,21 +63,24 @@ const useFirebase = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-      });
+        setAuthError(error.message);
+      })
+      .finally(() => setIsLoading(false));
   };
-  const handleEmailLogin = (email, password) => {
+  const handleEmailLogin = (email, password, location, history) => {
+    setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
         const user = userCredential.user;
-        // ...
+        const destination = location?.state?.from || "/";
+        history.replace(destination);
+        setAuthError("");
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+        setAuthError(error.message);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const signInWithGoogle = () => {
@@ -87,20 +94,21 @@ const useFirebase = () => {
   };
 
   const loginWithFacebook = () => {
-    return signInWithPopup(auth, FacebookAuthProvider);
-    const provider = new FacebookAuthProvider();
-    signInWithPopup(auth, provider)
+    signInWithPopup(auth, FacebookAuthProvider)
       .then((result) => {
-        console.log(result);
+        const user = result.user;
+        console.log(user);
       })
       .catch((error) => {
-        console.log(error.message);
-      });
+        const errorMessage = error.message;
+        console.log(errorMessage);
+      })
+      .finally(() => setIsLoading(false));
   };
 
   return {
     user,
-
+    authError,
     setUser,
     signInWithGoogle,
     loginWithFacebook,

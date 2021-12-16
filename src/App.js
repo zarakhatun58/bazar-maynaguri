@@ -8,14 +8,16 @@ import Header from "./pages/Header/Header";
 import Footer from "./pages/Footer/Footer";
 import About from "./pages/About/About";
 import AuthProvider from "./contexts/AuthProvider.js";
-import PrivateRoute from "./pages/Home/Login/PrivateRoute";
-import Dashboard from "./pages/Home/Dashboard/Dashboard";
+
 import EditProfile from "./pages/Profile/EditProfile";
 import MyOrder from "./pages/MyOrder/MyOrder";
 import MyFavorite from "./pages/MyFavorite/MyFavorite";
 import Message from "./pages/Message/Message";
 import Reviews from "./pages/Reviews/Reviews";
 import Notification from "./pages/Notification/Notification.js";
+
+import ForgetPassword from "./pages/Home/Login/ForgetPassword.js";
+
 import DashboardHome from "./pages/Home/Dashboard/DashboardHome";
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
       <AuthProvider>
         <Router>
           <Header />
+
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -31,34 +34,42 @@ function App() {
             <Route exact path="/home">
               <Home></Home>
             </Route>
-            <Route exact path="/login">
+            <Route path="/login">
               <Login />
             </Route>
 
-            <Route exact path="/signup">
+            <Route path="/signup">
               <Signup />
             </Route>
-            <Route exact path="about">
+            <Route path="/forgetPassword">
+              <ForgetPassword></ForgetPassword>
+            </Route>
+
+            <Route exact path="/dashboardHome">
+              <DashboardHome></DashboardHome>
+            </Route>
+
+            <Route path="/about">
               <About />
             </Route>
 
-            <Route exact path="/editProfile">
+            <Route path="/editProfile">
               <EditProfile />
             </Route>
-            <Route exact path="/myOrder">
+            <Route path="/myOrder">
               <MyOrder />
             </Route>
-            <Route exact path="/myFavorite">
+            <Route path="/myFavorite">
               <MyFavorite />
             </Route>
 
-            <Route exact path="/message">
+            <Route path="/message">
               <Message />
             </Route>
-            <Route exact path="/notification">
+            <Route path="/notification">
               <Notification />
             </Route>
-            <Route exact path="/reviews">
+            <Route path="/reviews">
               <Reviews />
             </Route>
           </Switch>

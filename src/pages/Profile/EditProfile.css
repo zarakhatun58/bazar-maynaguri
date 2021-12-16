@@ -1,0 +1,274 @@
+.dasbordRightlink h1,
+.dasbordRightlink h2 {
+  font: 500 21px/22px "Roboto", sans-serif;
+  margin-top: 19px;
+}
+.dasbordRightBody {
+  width: 100%;
+  float: left;
+  border: solid 1px #e6e6e6;
+  padding: 15px 25px 2px 25px;
+  margin-top: 40px;
+  background: #fff;
+  border: 1px solid #e8e8ea;
+  border-radius: 5px;
+  box-shadow: 0 2px 19px #e8e8e8;
+}
+.dasbordLeftlink {
+  width: 100%;
+}
+.dasbordLeftlink li {
+  font: 400 15px/20px "Roboto", sans-serif;
+  color: #0a0b0b;
+}
+.dasbordLeftlink li a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #414242;
+  position: relative;
+  width: 100%;
+  padding: 11px 15px;
+  padding-left: 53px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.dasbordLeftlink li span {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+}
+.dasbordLeftlink li a:hover {
+  color: #fff;
+  background: #f02f34;
+}
+.dasbordLeftlink li a em {
+  display: inline-block;
+  background: #000;
+  font: 500 12px/25px "Roboto", sans-serif;
+  color: #fff;
+  font-style: normal;
+  border-radius: 100%;
+  min-width: 25px;
+  min-height: 25px;
+  text-align: center;
+}
+.dasbordLeftlink li:last-child a {
+  border-top: double 6px #e6e6e6;
+  margin-top: 8px;
+}
+.dasbordLeftlink li:last-child a:hover {
+  border-color: #f02f34;
+}
+.dasbordLeftlink li a:hover img {
+  filter: brightness(20000%);
+}
+.editProformir {
+  width: 100%;
+  padding-top: 4px;
+}
+.iputBx {
+  width: 100%;
+  margin: 0 0 14px 0;
+  position: relative;
+}
+.genfil span,
+.iputBx label {
+  float: left;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.genfil span,
+.iputBx label {
+  width: 100%;
+  font: 400 15px/20px "Roboto", sans-serif;
+  color: #272828;
+}
+label {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 0px;
+}
+.iputBx input[type="text"],
+.iputBx input[type="password"],
+.iputBx input[type="tel"],
+.iputBx input[type="email"],
+.iputBx select,
+.iputBx textarea {
+  width: 100%;
+  height: 47px;
+  border: 1px solid #a1a7af;
+  border-radius: 6px;
+  outline: none;
+  font: 400 14px/18px "Roboto", sans-serif;
+  color: #7b7c7c;
+  padding: 0 9px;
+  padding-right: 24px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.locatioSec {
+  width: 100%;
+  padding-top: 12px;
+}
+.footdashSec {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+  border-top: solid 1px #dce0e5;
+  margin: 0 -25px;
+  margin-top: 20px;
+  position: relative;
+}
+.subbtn {
+  font: 500 18px/46px "Roboto";
+  background: url(../images/sevand.png) no-repeat #f02f34;
+  background-position: left 10px center;
+  border-radius: 3px;
+  height: 46px;
+  display: inline-block;
+  padding: 0 13px;
+  padding-left: 38px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.iputBx select {
+  background: url(../images/profilearw.png) no-repeat right 13px center;
+}
+.iputBx textarea {
+  resize: none;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  height: 163px;
+}
+.locatioSec h3 {
+  color: #171b1c;
+  font: 600 17px/27px "Roboto", sans-serif;
+}
+.subbtn:hover {
+  background-color: #000;
+}
+.uplodimg {
+  width: 100%;
+}
+.uplodimg span {
+  width: 100%;
+  font: 400 15px/20px "Roboto", sans-serif;
+  color: #272828;
+  display: inline-block;
+}
+.uplodimg input[type="file"] {
+  display: none;
+}
+.uplodimg label {
+  height: 48px;
+  padding: 0 12px;
+  padding-right: 20px;
+  border-radius: 5px;
+  color: #fff;
+  font: 500 16px/49px "Roboto", sans-serif;
+  background: #000;
+  margin-top: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.uplodimg label:hover {
+  background: #f02f34;
+}
+.uplodimg label img {
+  margin-left: 33px;
+}
+.uplodimg span {
+  width: 100%;
+  font: 400 15px/20px "Roboto", sans-serif;
+  color: #272828;
+  display: inline-block;
+}
+.uplodimg em {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  margin-left: 27px;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 3px;
+}
+.uplodimg em img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+.uplodimg li {
+  display: inline-block;
+}
+.uplodimgfil,
+.uplodimgfilimg {
+  float: left;
+  width: auto;
+}
+.uplodimg em {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  margin-left: 27px;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 3px;
+}
+.uplodimg em img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+.genfil li {
+  width: auto;
+  float: left;
+  margin-right: 18px;
+}
+.genfil li label {
+  margin: 0;
+  padding: 14px 0 0 2px;
+  cursor: pointer;
+}
+.edt_checkk .c_ul li {
+  width: auto;
+  float: left;
+  margin: 0 32px 0 0;
+}

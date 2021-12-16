@@ -23,7 +23,7 @@ const Login = () => {
   const history = useHistory();
   const location = useLocation();
 
-  const url = location.state?.from || "/home";
+  const url = location.state?.from || "/";
 
   const handleOnChange = (e) => {
     const field = e.target.name;
@@ -47,32 +47,18 @@ const Login = () => {
       });
   };
 
-  const handleFacebookLogin = () => {
-    loginWithFacebook()
-      .then((res) => {
-        setIsLoading(true);
-        setUser(res.user);
-        saveUser(user.email, user.displayName, "PUT");
-        history.push(url);
-      })
-      .catch((err) => console.log(err))
-      .finally(() => {
-        setIsLoading(false);
-      });
-  };
-
   const handleLogOut = () => {
     setIsLoading(true);
     logOut()
       .then((res) => {
         setUser({});
         history.push("/home");
-        setIsLoading(false);
       })
       .catch((error) => {
         // An error happened.
         console.log(error);
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const onSubmit = (data) => {
@@ -109,7 +95,7 @@ const Login = () => {
                   controlId="formBasicCheckbox"
                 >
                   <Form.Check type="checkbox" label="Check me out" />
-                  <Link to="/"> Forgot Password</Link>
+                  <Link to="/forgetPassword"> Forgot Password</Link>
                 </Form.Group>
                 <button className="btn btn-danger w-100 fw-bold" type="submit">
                   Login
@@ -131,7 +117,7 @@ const Login = () => {
               </div>
               <div className="">
                 <button
-                  onClick={handleFacebookLogin}
+                  onClick={loginWithFacebook}
                   className="btn btn-primary text-white"
                 >
                   Facebook

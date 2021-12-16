@@ -1,11 +1,11 @@
 import React from "react";
 
-import About from "../../About/About.js";
+import DashboardHome from "./../Dashboard/DashboardHome";
 
 const Home = () => {
   return (
     <div>
-      <About />
+      <DashboardHome></DashboardHome>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const Signup = () => {
     // console.log(data);
     const user = { email: data.email, displayName: data.name };
     axios
-      .post("https://desolate-cliffs-90588.herokuapp.com/users", user)
+      .post("https://afternoon-springs-05594.herokuapp.com/users", user)
       .then((res) => {
         if (res.data.insertedId) {
           alert("added successfully");
