@@ -3,63 +3,68 @@ import { Carousel } from "react-bootstrap";
 
 const Banner = () => {
   return (
-    <div>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 banner"
-            src="https://i.ibb.co/kD9BR9r/banner1.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>first</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 banner"
-            src="https://i.ibb.co/VHmL2V4/banner2.jpg"
-            alt="Second slide"
-          />
+    <>
+      <section class="banner">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <div class="container">
+            <div class="row res_padd">
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+              </ul>
+            </div>
+          </div>
 
-          <Carousel.Caption>
-            <h3>second</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 banner"
-            src="https://i.ibb.co/wBtb5hB/banner3.jpg"
-            alt="Third slide"
-          />
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://i.ibb.co/fxqnH5j/banner1.jpg" alt="" />
+              <div class="container">
+                <div class="row res_padd">
+                  <div class="sliderr_ttxt">
+                    <div class="carousel-caption">
+                      <h3>Quality Assurance</h3>
+                      <p>Free weighting Machine for our members.</p>
+                      <a href="#">Call For Enquiry</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <Carousel.Caption>
-            <h3>Three</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 banner"
-            src="https://i.ibb.co/k5zNZSZ/banner4.jpg"
-            alt="Third slide"
-          />
+            <div class="carousel-item">
+              <img src="https://i.ibb.co/xjt88Zz/banner2.jpg" alt="" />
+              <div class="container">
+                <div class="row res_padd">
+                  <div class="sliderr_ttxt">
+                    <div class="carousel-caption">
+                      <h3>Simply Dummy Caption Here</h3>
+                      <p>Free weighting Machine for our members.</p>
+                      <a href="#">Call For Enquiry</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <Carousel.Caption>
-            <h3>Four </h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 banner"
-            src="https://i.ibb.co/cQZh4Q2/banner5.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>fifth</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    </div>
+            <div class="carousel-item">
+              <img src="https://i.ibb.co/FHmjLjW/banner3.jpg" alt="" />
+              <div class="container">
+                <div class="row res_padd">
+                  <div class="sliderr_ttxt">
+                    <div class="carousel-caption">
+                      <h3>Quality Assurance</h3>
+                      <p>Free weighting Machine for our members.</p>
+                      <a href="#">Call For Enquiry</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

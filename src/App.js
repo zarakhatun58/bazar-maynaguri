@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header />
+          <Header></Header>
 
           <Switch>
             <Route exact path="/">
@@ -43,10 +43,6 @@ function App() {
             </Route>
             <Route path="/forgetPassword">
               <ForgetPassword></ForgetPassword>
-            </Route>
-
-            <Route exact path="/dashboardHome">
-              <DashboardHome></DashboardHome>
             </Route>
 
             <Route path="/about">

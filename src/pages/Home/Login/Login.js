@@ -68,7 +68,7 @@ const Login = () => {
 
   return (
     <Container className="bg-light py-5 w-50 ">
-      <Row className="justify-content-md-center">
+      <Row className="justify-content-left">
         <Col>
           <div className=" pb-5">
             <h3 className="text-center  pb-3">Sign In</h3>
@@ -97,9 +97,14 @@ const Login = () => {
                   <Form.Check type="checkbox" label="Check me out" />
                   <Link to="/forgetPassword"> Forgot Password</Link>
                 </Form.Group>
-                <button className="btn btn-danger w-100 fw-bold" type="submit">
-                  Login
-                </button>
+                <Link to="/">
+                  <button
+                    className="btn btn-danger w-100 fw-bold"
+                    type="submit"
+                  >
+                    Login
+                  </button>
+                </Link>
               </form>
             </div>
           </div>

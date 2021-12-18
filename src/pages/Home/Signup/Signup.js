@@ -29,7 +29,7 @@ const Signup = () => {
   return (
     <Container
       className="bg-light pb-5 w-50 justify-content-md-center mt-2"
-      style={{ border: "1px solid gray", boxShadow: " 0px 1px 10px #ccccccba" }}
+      style={{ border: "none", boxShadow: " 0px 1px 10px #ccccccba" }}
     >
       <Row>
         <Col>
