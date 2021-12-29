@@ -176,7 +176,11 @@ const Header = () => {
               >
                 B2B Information
               </Nav.Link>
-              <Nav.Link as={Link} className="text-light nav-color" to="/">
+              <Nav.Link
+                as={Link}
+                className="text-light nav-color"
+                to="/reviews"
+              >
                 Faq
               </Nav.Link>
               <Nav.Link
