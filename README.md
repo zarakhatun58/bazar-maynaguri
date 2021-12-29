@@ -10,7 +10,7 @@
 
 #
 
-# Technology : Frontend: React , tailwind , vanila css, react bootstrap , javascript
+### Technology : Frontend: React , tailwind , vanila css, react bootstrap , javascript
 
 ### Backend: Node js, mongoDb, axios, firebase, cors, express js,
 
