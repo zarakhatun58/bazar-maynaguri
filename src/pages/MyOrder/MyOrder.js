@@ -3,9 +3,9 @@ import React from "react";
 const MyOrder = () => {
   return (
     <div>
-      <div class="about_us_area">
-        <div class="container">
-          <div class="row res_padd">
+      <div className="about_us_area">
+        <div className="container">
+          <div className="row res_padd">
             <h1>Welcom To BazarMoynaguri</h1>
             <h2>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -16,9 +16,9 @@ const MyOrder = () => {
             </h2>
             <img src="images/icon05.jpg" alt="" />
 
-            <div class="linee"></div>
+            <div className="linee"></div>
 
-            <div class="aboput_boxx line_left">
+            <div className="aboput_boxx line_left">
               <img src="images/icon12.png" alt="" />
               <h3>Best Quality Product</h3>
               <p>
@@ -27,7 +27,7 @@ const MyOrder = () => {
               </p>
             </div>
 
-            <div class="aboput_boxx">
+            <div className="aboput_boxx">
               <img src="images/icon11.png" alt="" />
               <h3>Free Shipping</h3>
               <p>
@@ -36,7 +36,7 @@ const MyOrder = () => {
               </p>
             </div>
 
-            <div class="aboput_boxx border_none line_right">
+            <div className="aboput_boxx border_none line_right">
               <img src="images/icon10.png" alt="" />
               <h3>On Time Delivery</h3>
               <p>
@@ -50,14 +50,14 @@ const MyOrder = () => {
         </div>
       </div>
 
-      <div class="slider_one_area">
-        <div class="container">
-          <div class="row res_padd">
-            <div id="offer" class="owl-carousel testimonial-carousel-main">
-              <div class="item">
-                <div class="boxx_sg">
+      <div className="slider_one_area">
+        <div className="container">
+          <div className="row res_padd">
+            <div id="offer" className="owl-carousel testimonial-carousel-main">
+              <div className="item">
+                <div className="boxx_sg">
                   <img src="images/icon06.JPG" alt="" />
-                  <div class="containtt_one">
+                  <div className="containtt_one">
                     <h1>Simply dummy Offer text here</h1>
                     <h2>100% Organic Vegetable</h2>
                     <span>
@@ -70,10 +70,10 @@ const MyOrder = () => {
                 </div>
               </div>
 
-              <div class="item">
-                <div class="boxx_sg">
+              <div className="item">
+                <div className="boxx_sg">
                   <img src="images/icon08.jpg" alt="" />
-                  <div class="containtt_two">
+                  <div className="containtt_two">
                     <span>
                       <h1>Simply dummy Offer text here</h1>
                       <h2>100% Organic Vegetable</h2>
@@ -83,10 +83,10 @@ const MyOrder = () => {
                 </div>
               </div>
 
-              <div class="item">
-                <div class="boxx_sg">
+              <div className="item">
+                <div className="boxx_sg">
                   <img src="images/icon33.jpg" alt="" />
-                  <div class="containtt_one">
+                  <div className="containtt_one">
                     <h1>Simply dummy Offer text here</h1>
                     <h2>100% Organic Vegetable</h2>
                     <span>
@@ -99,10 +99,10 @@ const MyOrder = () => {
                 </div>
               </div>
 
-              <div class="item">
-                <div class="boxx_sg">
+              <div className="item">
+                <div className="boxx_sg">
                   <img src="images/icon34.jpg" alt="" />
-                  <div class="containtt_two">
+                  <div className="containtt_two">
                     <span>
                       <h1>Simply dummy Offer text here</h1>
                       <h2>100% Organic Vegetable</h2>
@@ -112,10 +112,10 @@ const MyOrder = () => {
                 </div>
               </div>
 
-              <div class="item">
-                <div class="boxx_sg">
+              <div className="item">
+                <div className="boxx_sg">
                   <img src="images/icon35.jpg" alt="" />
-                  <div class="containtt_one">
+                  <div className="containtt_one">
                     <h1>Simply dummy Offer text here</h1>
                     <h2>100% Organic Vegetable</h2>
                     <span>
@@ -128,10 +128,10 @@ const MyOrder = () => {
                 </div>
               </div>
 
-              <div class="item">
-                <div class="boxx_sg">
+              <div className="item">
+                <div className="boxx_sg">
                   <img src="images/icon36.jpg" alt="" />
-                  <div class="containtt_two">
+                  <div className="containtt_two">
                     <span>
                       <h1>Simply dummy Offer text here</h1>
                       <h2>100% Organic Vegetable</h2>
@@ -145,154 +145,154 @@ const MyOrder = () => {
         </div>
       </div>
 
-      <div class="our_products">
-        <div class="container">
-          <div class="row res_padd2">
+      <div className="our_products">
+        <div className="container">
+          <div className="row res_padd2">
             <h1>Our Products</h1>
             <h3>Shoping made easy or some caption text show here</h3>
             <img src="images/icon05.jpg" alt="" />
 
-            <div class="linee"></div>
+            <div className="linee"></div>
 
-            <div class="product_box">
-              <div class="pro_image">
+            <div className="product_box">
+              <div className="pro_image">
                 <a href="#">
                   <img src="images/icon15.jpg" alt="" />
                 </a>
-                <span class="enq01">
+                <span className="enq01">
                   <a href="#">Call For Enquiry</a>
                 </span>
               </div>
-              <div class="pro_desc">
+              <div className="pro_desc">
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <span class="pro_line">
+                <span className="pro_line">
                   <strong></strong>
                 </span>
               </div>
             </div>
 
-            <div class="product_box">
-              <div class="pro_image">
+            <div className="product_box">
+              <div className="pro_image">
                 <a href="#">
                   <img src="images/icon22.jpg" alt="" />
                 </a>
-                <span class="enq01">
+                <span className="enq01">
                   <a href="#">Call For Enquiry</a>
                 </span>
               </div>
-              <div class="pro_desc">
+              <div className="pro_desc">
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <span class="pro_line">
+                <span className="pro_line">
                   <strong></strong>
                 </span>
               </div>
             </div>
 
-            <div class="product_box">
-              <div class="pro_image">
+            <div className="product_box">
+              <div className="pro_image">
                 <a href="#">
                   <img src="images/icon21.jpg" alt="" />
                 </a>
-                <span class="enq01">
+                <span className="enq01">
                   <a href="#">Call For Enquiry</a>
                 </span>
               </div>
-              <div class="pro_desc">
+              <div className="pro_desc">
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <span class="pro_line">
+                <span className="pro_line">
                   <strong></strong>
                 </span>
               </div>
             </div>
 
-            <div class="product_box">
-              <div class="pro_image">
+            <div className="product_box">
+              <div className="pro_image">
                 <a href="#">
                   <img src="images/icon20.png" alt="" />
                 </a>
-                <span class="enq01">
+                <span className="enq01">
                   <a href="#">Call For Enquiry</a>
                 </span>
               </div>
-              <div class="pro_desc">
+              <div className="pro_desc">
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <span class="pro_line">
+                <span className="pro_line">
                   <strong></strong>
                 </span>
               </div>
             </div>
 
-            <div class="product_box">
-              <div class="pro_image">
+            <div className="product_box">
+              <div className="pro_image">
                 <a href="#">
                   <img src="images/icon18.png" alt="" />
                 </a>
-                <span class="enq01">
+                <span className="enq01">
                   <a href="#">Call For Enquiry</a>
                 </span>
               </div>
-              <div class="pro_desc">
+              <div className="pro_desc">
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <span class="pro_line">
+                <span className="pro_line">
                   <strong></strong>
                 </span>
               </div>
             </div>
 
-            <div class="product_box">
-              <div class="pro_image">
+            <div className="product_box">
+              <div className="pro_image">
                 <a href="#">
                   <img src="images/icon17.jpg" alt="" />
                 </a>
-                <span class="enq01">
+                <span className="enq01">
                   <a href="#">Call For Enquiry</a>
                 </span>
               </div>
-              <div class="pro_desc">
+              <div className="pro_desc">
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <span class="pro_line">
+                <span className="pro_line">
                   <strong></strong>
                 </span>
               </div>
             </div>
 
-            <div class="product_box">
-              <div class="pro_image">
+            <div className="product_box">
+              <div className="pro_image">
                 <a href="#">
                   <img src="images/icon16.JPG" alt="" />
                 </a>
-                <span class="enq01">
+                <span className="enq01">
                   <a href="#">Call For Enquiry</a>
                 </span>
               </div>
-              <div class="pro_desc">
+              <div className="pro_desc">
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <span class="pro_line">
+                <span className="pro_line">
                   <strong></strong>
                 </span>
               </div>
             </div>
 
-            <div class="product_box">
-              <div class="pro_image">
+            <div className="product_box">
+              <div className="pro_image">
                 <a href="#">
                   <img src="images/icon19.png" alt="" />
                 </a>
-                <span class="enq01">
+                <span className="enq01">
                   <a href="#">Call For Enquiry</a>
                 </span>
               </div>
-              <div class="pro_desc">
+              <div className="pro_desc">
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <span class="pro_line">
+                <span className="pro_line">
                   <strong></strong>
                 </span>
               </div>
@@ -301,9 +301,9 @@ const MyOrder = () => {
         </div>
       </div>
 
-      <div class="small_banner">
-        <div class="container">
-          <div class="row rellati res_padd">
+      <div className="small_banner">
+        <div className="container">
+          <div className="row rellati res_padd">
             <h1>If you have any quary please fell free to contact us</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <a href="#">Contact Us</a>
@@ -311,212 +311,212 @@ const MyOrder = () => {
         </div>
       </div>
 
-      <div class="latest_products">
-        <div class="container">
-          <div class="row rellati">
-            <div class="lp_product"></div>
+      <div className="latest_products">
+        <div className="container">
+          <div className="row rellati">
+            <div className="lp_product"></div>
 
             <h1>Latest Products</h1>
             <h3>Shoping made easy or some caption text show here</h3>
             <img src="images/icon05.jpg" alt="" />
 
-            <div class="linee"></div>
+            <div className="linee"></div>
 
             <div
               id="latest_product_slider"
-              class="owl-carousel testimonial-carousel-main rounded_pro"
+              className="owl-carousel testimonial-carousel-main rounded_pro"
             >
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon30.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon29.png" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon28.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon27.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon26.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon30.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon29.png" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon28.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon27.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon26.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon30.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon29.png" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon28.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon27.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>
 
-              <div class="item">
-                <div class="lp_round">
+              <div className="item">
+                <div className="lp_round">
                   <a href="#">
                     <img src="images/icon26.jpg" alt="" />
                   </a>
                 </div>
                 <a href="#">Product name show here</a>
                 <p>Rs.40.00</p>
-                <a href="#" class="inqq">
+                <a href="#" className="inqq">
                   Call For Enquiry
                 </a>
               </div>

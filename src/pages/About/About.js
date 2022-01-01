@@ -3,9 +3,9 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <div class="about_us_area">
-        <div class="container">
-          <div class="row res_padd">
+      <div className="about_us_area">
+        <div className="container">
+          <div className="row res_padd">
             <h1>Welcom To BazarMoynaguri</h1>
             <h2>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -16,9 +16,9 @@ const About = () => {
             </h2>
             <img src="images/icon05.jpg" alt="" />
 
-            <div class="linee"></div>
+            <div className="linee"></div>
 
-            <div class="aboput_boxx line_left">
+            <div className="aboput_boxx line_left">
               <img src="images/icon12.png" alt="" />
               <h3>Best Quality Product</h3>
               <p>
@@ -27,7 +27,7 @@ const About = () => {
               </p>
             </div>
 
-            <div class="aboput_boxx">
+            <div className="aboput_boxx">
               <img src="images/icon11.png" alt="" />
               <h3>Free Shipping</h3>
               <p>
@@ -36,7 +36,7 @@ const About = () => {
               </p>
             </div>
 
-            <div class="aboput_boxx border_none line_right">
+            <div className="aboput_boxx border_none line_right">
               <img src="images/icon10.png" alt="" />
               <h3>On Time Delivery</h3>
               <p>

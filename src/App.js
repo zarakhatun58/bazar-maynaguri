@@ -18,7 +18,9 @@ import Notification from "./pages/Notification/Notification.js";
 
 import ForgetPassword from "./pages/Home/Login/ForgetPassword.js";
 
-import DashboardHome from "./pages/Home/Dashboard/DashboardHome";
+import Products from "./pages/Products/Products";
+import AddProducts from "./pages/AddProducts/AddProducts";
+import Booking from "./pages/Booking/Booking";
 
 function App() {
   return (
@@ -67,6 +69,15 @@ function App() {
             </Route>
             <Route path="/reviews">
               <Reviews />
+            </Route>
+            <Route path="/products">
+              <Products />
+            </Route>
+            <Route exact path="/addProducts">
+              <AddProducts />
+            </Route>
+            <Route exact path="/Booking/:id">
+              <Booking />
             </Route>
           </Switch>
           <Footer />

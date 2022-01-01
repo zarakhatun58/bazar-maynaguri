@@ -3,7 +3,7 @@ import "./Header.css";
 
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth.js";
-import Search from "../Home/Home/Search/Search.js";
+
 import {
   Button,
   Nav,
@@ -64,28 +64,28 @@ const Header = () => {
             </span>
           </Col>
         </Row>
-        <div class="middle_head">
+        <div className="middle_head">
           <Row className="container row res_padd ">
             <Col xs="12" sm="12" md="6" lg="6" xl="6" className="pr-4">
-              <span class="logo">
+              <span className="logo">
                 <a href="#">
                   <img src="https://i.ibb.co/BfB3nbD/logo.png" alt="" />
                 </a>
               </span>
             </Col>
             <Col xs="12" sm="12" md="6" lg="6" xl="6" className="pr-2">
-              <div class="right_search ml-auto">
-                <div class="left_search">
+              <div className="right_search ml-auto">
+                <div className="left_search">
                   <form>
                     <input
                       type="text"
-                      class="search_type mobill010"
+                      className="search_type mobill010"
                       placeholder="Search for Products"
                     />
                     <button
                       type="submit"
                       value=""
-                      class="search_submit"
+                      className="search_submit"
                     ></button>
                   </form>
                 </div>
@@ -105,13 +105,6 @@ const Header = () => {
           <Navbar.Toggle className="bg-light" />
           <Navbar.Collapse className="justify-content-start ">
             <Nav>
-              <Nav.Link
-                as={Link}
-                className="nav-color text-light "
-                to="/dashboardHome"
-              >
-                Dashboard
-              </Nav.Link>
               <NavDropdown
                 title="All Categories"
                 id="collasible-nav-dropdown"
@@ -174,7 +167,7 @@ const Header = () => {
                 className="text-light nav-color"
                 to="/notification"
               >
-                B2B Information
+                Order Here
               </Nav.Link>
               <Nav.Link
                 as={Link}

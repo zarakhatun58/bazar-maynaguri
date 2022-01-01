@@ -46,23 +46,23 @@ const EditProfile = ({ time, email }) => {
   };
   return (
     <>
-      <div class="">
-        <section class="mainDasbordsec">
-          <div class="container">
-            <div class="mainDasbordInr">
-              <div class="row">
-                <div class="col-lg-3 col-md-12 col-sm-12 pl-0">
-                  <div class="dasbordLeftsec">
+      <div className="">
+        <section className="mainDasbordsec">
+          <div className="container">
+            <div className="mainDasbordInr">
+              <div className="row">
+                <div className="col-lg-3 col-md-12 col-sm-12 pl-0">
+                  <div className="dasbordLeftsec">
                     <a
                       href="#url"
-                      class="showmeu"
+                      className="showmeu"
                       data-toggle="collapse"
                       data-target="#demo"
                     >
-                      <i class="fa fa-bars"></i>Show Menus
+                      <i className="fa fa-bars"></i>Show Menus
                     </a>
-                    <div class="dasbordLeft">
-                      <div class="profibx">
+                    <div className="dasbordLeft">
+                      <div className="profibx">
                         <em>
                           <img
                             src="https://i.ibb.co/w4qSB9j/dachprofi.jpg"
@@ -118,93 +118,93 @@ const EditProfile = ({ time, email }) => {
                           </li>
                         </ul>
                       </div>
-                      <div class="dasbordLeftlink">
+                      <div className="dasbordLeftlink">
                         <ul>
                           <li>
-                            <a href="#">
+                            <Link to="/dashboard">
                               <span>
                                 <img
                                   src="https://i.ibb.co/qjrg7Zz/dashico1.png"
                                   alt=""
-                                  class="dashico1"
+                                  className="dashico1"
                                 />
                               </span>
                               Dashboard
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="#" class="activ">
+                            <Link to="/editProfile" className="activ">
                               <span>
                                 <img
                                   src="https://i.ibb.co/qjrg7Zz/dashico1.png"
                                   alt=""
-                                  class="dashico1"
+                                  className="dashico1"
                                 />
                               </span>
                               Edit Profile
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="#">
+                            <Link to="/addProduct">
                               <span>
                                 <img
                                   src="https://i.ibb.co/m08HQvw/dashico3.png"
                                   alt=""
-                                  class="dashico1"
+                                  className="dashico1"
                                 />
                               </span>
                               My Order
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="#">
+                            <Link to="/myFavorite">
                               <span>
                                 <img
                                   src="https://i.ibb.co/ThPsRWk/dashico10.png"
                                   alt=""
-                                  class="dashico1"
+                                  className="dashico1"
                                 />
                               </span>
                               My Favorite
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="#">
+                            <Link to="/reviews">
                               <span>
                                 <img
                                   src="images/dashico4.png"
                                   alt=""
-                                  class="dashico1"
+                                  className="dashico1"
                                 />
                               </span>
                               Reviews
-                            </a>
+                            </Link>
                           </li>
 
                           <li>
-                            <a href="#">
+                            <Link to="/message">
                               <span>
                                 <img
                                   src="images/dashico7.png"
                                   alt=""
-                                  class="dashico1"
+                                  className="dashico1"
                                 />
                               </span>
                               Messages<em>10</em>
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="#">
+                            <Link to="/notification">
                               <span>
                                 <img
                                   src="images/dashico8.png"
                                   alt=""
-                                  class="dashico1"
+                                  className="dashico1"
                                 />
                               </span>
                               Notifications
                               <em>14</em>
-                            </a>
+                            </Link>
                           </li>
                           <li>
                             <Link to="/login">
@@ -212,7 +212,7 @@ const EditProfile = ({ time, email }) => {
                                 <img
                                   src="images/dashico9.png"
                                   alt=""
-                                  class="dashico1"
+                                  className="dashico1"
                                 />
                               </span>
                               <button
@@ -228,16 +228,16 @@ const EditProfile = ({ time, email }) => {
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-9 col-md-12 col-sm-12 pr-0">
-                  <div class="dasbordRightlink">
+                <div className="col-lg-9 col-md-12 col-sm-12 pr-0">
+                  <div className="dasbordRightlink">
                     <h1>Edit Profile</h1>
-                    <div class="dasbordRightBody">
-                      <div class="editProformBx">
+                    <div className="dasbordRightBody">
+                      <div className="editProformBx">
                         <form action="edit-profile-service-offered.html">
-                          <div class="editProformir">
-                            <div class="row">
-                              <div class="col-md-4 col-sm-12">
-                                <div class="iputBx">
+                          <div className="editProformir">
+                            <div className="row">
+                              <div className="col-md-4 col-sm-12">
+                                <div className="iputBx">
                                   <label>Name</label>
                                   <input
                                     type="text"
@@ -247,8 +247,8 @@ const EditProfile = ({ time, email }) => {
                                   />
                                 </div>
                               </div>
-                              <div class="col-md-4 col-sm-12">
-                                <div class="iputBx">
+                              <div className="col-md-4 col-sm-12">
+                                <div className="iputBx">
                                   <label>Email</label>
                                   <input
                                     type="text"
@@ -258,8 +258,8 @@ const EditProfile = ({ time, email }) => {
                                   />
                                 </div>
                               </div>
-                              <div class="col-md-4 col-sm-12">
-                                <div class="iputBx">
+                              <div className="col-md-4 col-sm-12">
+                                <div className="iputBx">
                                   <label>Phone</label>
                                   <input
                                     type="text"
@@ -269,8 +269,8 @@ const EditProfile = ({ time, email }) => {
                                   />
                                 </div>
                               </div>
-                              <div class="col-sm-12">
-                                <div class="iputBx">
+                              <div className="col-sm-12">
+                                <div className="iputBx">
                                   <label>About me</label>
                                   <textarea
                                     onBlur={handleOnBlur}
@@ -280,15 +280,15 @@ const EditProfile = ({ time, email }) => {
                                 </div>
                               </div>
 
-                              <div class="col-md-5 col-sm-6">
+                              <div className="col-md-5 col-sm-6">
                                 <div
                                   id="ui-datepicker-div"
-                                  class="iputBx  ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"
+                                  className="iputBx  ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"
                                 >
                                   <label>Date of Birth</label>
                                   <input
                                     type="date"
-                                    class="datepicker"
+                                    className="datepicker"
                                     placeholder="Enter here"
                                     onBlur={handleOnBlur}
                                     required
@@ -300,8 +300,8 @@ const EditProfile = ({ time, email }) => {
                                 </div>
                               </div>
 
-                              <div class="col-md-4 col-sm-6">
-                                <div class="genfil">
+                              <div className="col-md-4 col-sm-6">
+                                <div className="genfil">
                                   <span>Gender</span>
                                   <ul>
                                     <li>
@@ -329,14 +329,14 @@ const EditProfile = ({ time, email }) => {
                                 </div>
                               </div>
 
-                              <div class="col-sm-12">
-                                <div class="form_group edt_checkk">
+                              <div className="col-sm-12">
+                                <div className="form_group edt_checkk">
                                   <label className="text-left search_label">
                                     Travel
                                   </label>
-                                  <ul class="c_ul">
+                                  <ul className="c_ul">
                                     <li>
-                                      <label class="contect_container_checkBox">
+                                      <label className="contect_container_checkBox">
                                         Bus
                                         <input
                                           type="checkbox"
@@ -345,11 +345,11 @@ const EditProfile = ({ time, email }) => {
                                           onBlur={handleOnBlur}
                                           required
                                         />
-                                        <span class="contect_checkmark"></span>
+                                        <span className="contect_checkmark"></span>
                                       </label>
                                     </li>
                                     <li>
-                                      <label class="contect_container_checkBox">
+                                      <label className="contect_container_checkBox">
                                         Car
                                         <input
                                           type="checkbox"
@@ -357,18 +357,18 @@ const EditProfile = ({ time, email }) => {
                                           onBlur={handleOnBlur}
                                           required
                                         />
-                                        <span class="contect_checkmark"></span>
+                                        <span className="contect_checkmark"></span>
                                       </label>
                                     </li>
                                     <li>
-                                      <label class="contect_container_checkBox">
+                                      <label className="contect_container_checkBox">
                                         Track
                                         <input type="checkbox" name="text" />
-                                        <span class="contect_checkmark"></span>
+                                        <span className="contect_checkmark"></span>
                                       </label>
                                     </li>
                                     <li>
-                                      <label class="contect_container_checkBox">
+                                      <label className="contect_container_checkBox">
                                         Walk
                                         <input
                                           type="checkbox"
@@ -376,11 +376,11 @@ const EditProfile = ({ time, email }) => {
                                           name="email"
                                           required
                                         />
-                                        <span class="contect_checkmark"></span>
+                                        <span className="contect_checkmark"></span>
                                       </label>
                                     </li>
                                     <li>
-                                      <label class="contect_container_checkBox">
+                                      <label className="contect_container_checkBox">
                                         Scooter
                                         <input
                                           type="checkbox"
@@ -388,19 +388,19 @@ const EditProfile = ({ time, email }) => {
                                           required
                                           name="scooter"
                                         />
-                                        <span class="contect_checkmark"></span>
+                                        <span className="contect_checkmark"></span>
                                       </label>
                                     </li>
                                   </ul>
                                 </div>
                               </div>
 
-                              <div class="col-sm-12">
-                                <div class="form_fild_area_m frm_grp arro">
+                              <div className="col-sm-12">
+                                <div className="form_fild_area_m frm_grp arro">
                                   <label className="text-left">Language </label>
                                   <select
                                     data-placeholder="Select"
-                                    class="chosen-select"
+                                    className="chosen-select"
                                     multiple
                                     tabindex="4"
                                     onBlur={handleOnBlur}
@@ -416,15 +416,15 @@ const EditProfile = ({ time, email }) => {
                                 </div>
                               </div>
 
-                              <div class="col-sm-12">
-                                <div class="uplodimg">
+                              <div className="col-sm-12">
+                                <div className="uplodimg">
                                   <span>Profile Image</span>
-                                  <div class="uplodimgfil">
+                                  <div className="uplodimgfil">
                                     <input
                                       type="file"
                                       name="file-1[]"
                                       id="file-1"
-                                      class="inputfile inputfile-1"
+                                      className="inputfile inputfile-1"
                                       data-multiple-caption="{count} files selected"
                                       multiple
                                       onBlur={handleOnBlur}
@@ -435,7 +435,7 @@ const EditProfile = ({ time, email }) => {
                                       <img src="images/clickhe.png" alt="" />
                                     </label>
                                   </div>
-                                  <div class="uplodimgfilimg">
+                                  <div className="uplodimgfilimg">
                                     <em>
                                       <img src="images/uplodimg.jpg" alt="" />
                                     </em>
@@ -444,11 +444,11 @@ const EditProfile = ({ time, email }) => {
                               </div>
                             </div>
 
-                            <div class="locatioSec">
+                            <div className="locatioSec">
                               <h3>Location</h3>
-                              <div class="row">
-                                <div class="col-md-4 col-sm-6">
-                                  <div class="iputBx">
+                              <div className="row">
+                                <div className="col-md-4 col-sm-6">
+                                  <div className="iputBx">
                                     <label>Country</label>
                                     <select>
                                       <option>Select</option>
@@ -456,8 +456,8 @@ const EditProfile = ({ time, email }) => {
                                     </select>
                                   </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                  <div class="iputBx">
+                                <div className="col-md-4 col-sm-6">
+                                  <div className="iputBx">
                                     <label>State</label>
                                     <input
                                       type="text"
@@ -468,8 +468,8 @@ const EditProfile = ({ time, email }) => {
                                     />
                                   </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12">
-                                  <div class="iputBx">
+                                <div className="col-md-4 col-sm-12">
+                                  <div className="iputBx">
                                     <label>City</label>
                                     <input
                                       type="text"
@@ -483,11 +483,11 @@ const EditProfile = ({ time, email }) => {
                               </div>
                             </div>
 
-                            <div class="locatioSec">
+                            <div className="locatioSec">
                               <h3>Change password</h3>
-                              <div class="row">
-                                <div class="col-md-4 col-sm-6">
-                                  <div class="iputBx">
+                              <div className="row">
+                                <div className="col-md-4 col-sm-6">
+                                  <div className="iputBx">
                                     <label>Current password</label>
                                     <input
                                       type="password"
@@ -498,8 +498,8 @@ const EditProfile = ({ time, email }) => {
                                     />
                                   </div>
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                  <div class="iputBx">
+                                <div className="col-md-4 col-sm-6">
+                                  <div className="iputBx">
                                     <label>New password</label>
                                     <input
                                       type="password"
@@ -510,8 +510,8 @@ const EditProfile = ({ time, email }) => {
                                     />
                                   </div>
                                 </div>
-                                <div class="col-md-4 col-sm-12">
-                                  <div class="iputBx">
+                                <div className="col-md-4 col-sm-12">
+                                  <div className="iputBx">
                                     <label>Confirm password</label>
                                     <input
                                       type="password"
@@ -525,11 +525,11 @@ const EditProfile = ({ time, email }) => {
                               </div>
                             </div>
 
-                            <div class="footdashSec">
+                            <div className="footdashSec">
                               <input
                                 type="submit"
                                 value="Save all changes"
-                                class="subbtn"
+                                className="subbtn"
                                 onClick={handleProfileSave}
                               />
                             </div>
@@ -637,35 +637,35 @@ const { user, logOut } = useAuth();
           <Col sm={9}>
             <form className=" flex flex-col align-items-center justify-center text-start  border shadow-md p-2">
               <Row>
-                <div class="form-group col-md-4">
+                <div className="form-group col-md-4">
                   <label for="inputName">Name</label>
                   <input
                     type="Name"
                     onBlur={handleOnBlur}
                     name="displayName"
-                    class="form-control"
+                    className="form-control"
                     id="inputName"
                     placeholder="Enter Name"
                   />
                 </div>
-                <div class="form-group col-md-4 col-lg-4 ">
+                <div className="form-group col-md-4 col-lg-4 ">
                   <label for="inputEmail4">Email</label>
                   <input
                     type="email"
                     onBlur={handleOnBlur}
                     name="email"
-                    class="form-control"
+                    className="form-control"
                     id="inputEmail4"
                     placeholder=" Enter Email"
                   />
                 </div>
-                <div class="form-group col-md-4">
+                <div className="form-group col-md-4">
                   <label for="Number">Phone</label>
                   <input
                     type="number"
                     onBlur={handleOnBlur}
                     name="number"
-                    class="form-control"
+                    className="form-control"
                     id="number"
                     placeholder="Enter here"
                   />
@@ -688,7 +688,7 @@ const { user, logOut } = useAuth();
                   />
                 </div>
               </Row>
-              <Row class="form-group ">
+              <Row className="form-group ">
                 <div className=" col-md-6">
                   <label for="inputDate">Date of Birth</label> <br />
                   <input
@@ -726,10 +726,10 @@ const { user, logOut } = useAuth();
                 </div>
               </Row>
               <Row>
-                <div class="col-sm-12">
-                  <div class=" col-sm-12 ">
+                <div className="col-sm-12">
+                  <div className=" col-sm-12 ">
                     <div>
-                      <label class="mt-2">Travel</label>
+                      <label className="mt-2">Travel</label>
                       <Form.Group
                         className=" mt-2 mb-3 d-flex mr-2 p-2 "
                         id="formGridCheckbox"
@@ -765,13 +765,13 @@ const { user, logOut } = useAuth();
                 </div>
               </Row>
               <Row className="w-75">
-                <div class="form-group">
+                <div className="form-group">
                   <label for="inputAddress">Language</label>
                   <select
                     type="text"
                     name="language"
                     onBlur={handleOnBlur}
-                    class="form-control"
+                    className="form-control"
                     id="inputAddress"
                     placeholder="Enter your description here"
                   >
@@ -796,24 +796,24 @@ const { user, logOut } = useAuth();
               </Row>
               <Row className="w-75">
                 <label for="input">Location</label>
-                <div class="form-row">
-                  <div class="form-group col-md-4">
+                <div className="form-row">
+                  <div className="form-group col-md-4">
                     <label for="inputCity">Country</label>
                     <input
                       name="country"
                       onBlur={handleOnBlur}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="inputCity"
                     />
                   </div>
-                  <div class="form-group col-md-4">
+                  <div className="form-group col-md-4">
                     <label for="inputState">State</label>
                     <select
                       onBlur={handleOnBlur}
                       name="state"
                       id="inputState"
-                      class="form-control"
+                      className="form-control"
                     >
                       <option selected>Choose...</option>
                       <option>Maharashtra</option>
@@ -821,13 +821,13 @@ const { user, logOut } = useAuth();
                       <option>Delhi</option>
                     </select>
                   </div>
-                  <div class="form-group col-md-4">
+                  <div className="form-group col-md-4">
                     <label for="inputState">City</label>
                     <select
                       onBlur={handleOnBlur}
                       name="city"
                       id="inputState"
-                      class="form-control"
+                      className="form-control"
                     >
                       <option selected>Choose...</option>
                       <option>Bangalore</option>
@@ -840,8 +840,8 @@ const { user, logOut } = useAuth();
 
               <Row className="w-75">
                 <label for="input">Change Password</label>
-                <div class="form-row">
-                  <div class="form-group col-md-4">
+                <div className="form-row">
+                  <div className="form-group col-md-4">
                     <label>Current password</label>
                     <input
                       name="password"
@@ -850,11 +850,11 @@ const { user, logOut } = useAuth();
                       placeholder="Enter here"
                     />
                   </div>
-                  <div class="form-group col-md-4">
+                  <div className="form-group col-md-4">
                     <label>New password</label>
                     <input type="password" placeholder="Enter here" />
                   </div>
-                  <div class="form-group col-md-4">
+                  <div className="form-group col-md-4">
                     <label>Confirm password</label>
                     <input type="password" placeholder="Enter here" />
                   </div>
@@ -864,7 +864,7 @@ const { user, logOut } = useAuth();
               <button
                 onClick={handleProfileSave}
                 type="submit"
-                class="btn btn-danger"
+                className="btn btn-danger"
               >
                 Save All Change
               </button>

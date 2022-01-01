@@ -4,11 +4,11 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div class="wrapper">
-      <footer class="fotter_area">
-        <div class="container">
-          <div class="row res_padd">
-            <div class="footer_lft">
+    <div className="wrapper">
+      <footer className="fotter_area">
+        <div className="container">
+          <div className="row res_padd">
+            <div className="footer_lft">
               <a href="#">
                 <img src="images/logo1.png" alt="" />
               </a>
@@ -21,13 +21,13 @@ const Footer = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
                 egestas sem tellus, ac consectetur mi
               </p>
-              <a href="#" class="moree">
+              <a href="#" className="moree">
                 Read more <img src="images/icon32.png" alt="" />
               </a>
             </div>
 
-            <div class="footer_rght">
-              <div class="foot_01">
+            <div className="footer_rght">
+              <div className="foot_01">
                 <h4>Quick Links</h4>
                 <ul>
                   <li>
@@ -45,7 +45,7 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div class="foot_02">
+              <div className="foot_02">
                 <ul>
                   <li>
                     <a href="#">Enquiry Us</a>
@@ -56,7 +56,7 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div class="foot_03 xxmt01">
+              <div className="foot_03 xxmt01">
                 <h4>Contact Us</h4>
                 <ul>
                   <li>
@@ -71,7 +71,7 @@ const Footer = () => {
                       Dist : Jalpaiguri, Pin : 753224.
                     </p>
                   </li>
-                  <li class="no1">
+                  <li className="no1">
                     <a href="#">
                       <span>
                         <img src="images/icon34.png" alt="" />
@@ -79,7 +79,7 @@ const Footer = () => {
                       <p>+91 7797813261</p>
                     </a>
                   </li>
-                  <li class="no2">
+                  <li className="no2">
                     <a href="#">
                       <span>
                         <img src="images/icon35.png" alt="" />
@@ -90,7 +90,7 @@ const Footer = () => {
                 </ul>
               </div>
 
-              <div class="popular_catt">
+              <div className="popular_catt">
                 <h5>Popular Categories</h5>
                 <ul>
                   <li>
@@ -114,9 +114,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class="copy_fot">
-          <div class="container">
-            <div class="row res_padd">
+        <div className="copy_fot">
+          <div className="container">
+            <div className="row res_padd">
               <p>
                 &copy; Copyright 2020 bazermaynaguri.com | All Rights Reserved.
               </p>

@@ -1,3 +1,10 @@
+.product-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
 @font-face {
   font-family: "allerregular";
   src: url("https://i.ibb.co/JHKzxnr/star1.png") format("woff2"),
@@ -963,11 +970,13 @@ p {
   float: left;
   margin: 0 0 11px 0 !important;
 }
-
+.no1 p {
+}
 .no1 img {
   margin: -10px 0 0 0;
 }
-
+.no2 p {
+}
 .no2 img {
   margin: -7px 0 0 0;
 }
@@ -976,7 +985,8 @@ p {
   width: 64%;
   margin: 0;
 }
-
+.footer_rght h4 {
+}
 .footer_rght ul {
   float: left;
 }
@@ -1280,9 +1290,9 @@ p {
 .ui-widget-header .ui-state-default,
 .ui-button,
 html .ui-button.ui-state-disabled:hover,
-/* html .ui-button.ui-state-disabled:active {
+html .ui-button.ui-state-disabled:active {
   border: 1px solid #ed3036 !important;
-} */
+}
 
 .slider_rnge {
   float: left;
@@ -1422,6 +1432,9 @@ html .ui-button.ui-state-disabled:hover,
   overflow: hidden;
 }
 .search_proo {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  justify-content: space-around;
   float: left;
   width: 24%;
   border: 1px solid #e2e2e2;
@@ -3219,6 +3232,7 @@ tab_head_sheet_1 p b {
 .subtotals {
   width: 100%;
   display: inline-block;
+  float: right;
 }
 .subtotals h4 {
   font-size: 17px;
